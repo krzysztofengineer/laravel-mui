@@ -6,7 +6,6 @@
 
         <title inertia>{{ config('app.name', 'Laravel') }}</title>
 
-        @routes
         @viteReactRefresh
         @vite(['resources/js/app.tsx', "resources/js/Pages/{$page['component']}.tsx"])
         @inertiaHead

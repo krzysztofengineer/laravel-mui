@@ -5,7 +5,7 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
 import { createInertiaApp } from '@inertiajs/react';
-import { createTheme, ThemeProvider } from '@mui/material';
+import { createTheme, CssBaseline, ThemeProvider } from '@mui/material';
 import { grey } from '@mui/material/colors';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { createRoot } from 'react-dom/client';
@@ -34,6 +34,7 @@ createInertiaApp({
         const root = createRoot(el);
 
         root.render(<ThemeProvider theme={theme}>
+            <CssBaseline />
             <App {...props} />
         </ThemeProvider>);
     },
